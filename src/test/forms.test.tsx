@@ -2,6 +2,16 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { InquiryForm } from "@/components/shared/InquiryForm";
 
 describe("InquiryForm", () => {
+  it("keeps native form validation enabled", () => {
+    render(<InquiryForm kind="newsletter" />);
+    const email = screen.getByLabelText(/email/i);
+    const form = email.closest("form");
+
+    expect(email).toBeRequired();
+    expect(email).toHaveAttribute("type", "email");
+    expect(form).not.toHaveAttribute("novalidate");
+  });
+
   it("does not fake submission when no endpoint is configured", () => {
     render(<InquiryForm kind="newsletter" />);
     fireEvent.change(screen.getByLabelText(/email/i), { target: { value: "guest@example.com" } });

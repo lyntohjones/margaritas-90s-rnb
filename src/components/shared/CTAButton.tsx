@@ -14,17 +14,18 @@ export function CTAButton({
 }) {
   const className = `cta-button cta-button--${variant}`;
   const isExternalAnchor = href.startsWith("#");
+  const style = variant === "primary" ? { color: "#111111" } : undefined;
 
   if (isExternalAnchor) {
     return (
-      <a className={className} href={href}>
+      <a className={className} href={href} style={style}>
         {children}
       </a>
     );
   }
 
   return (
-    <Link className={className} href={href}>
+    <Link className={className} href={href} style={style}>
       {children}
     </Link>
   );

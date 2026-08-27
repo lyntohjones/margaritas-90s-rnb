@@ -4,13 +4,13 @@ export const siteConfig = {
   description:
     "An elevated social night built around timeless R&B, signature drinks, good company, and the kind of nights you want to replay.",
   nav: [
-    { label: "Experience", href: "#experience" },
-    { label: "Editions", href: "#editions" },
-    { label: "Gallery", href: "#gallery" },
+    { label: "Experience", href: "/#experience" },
+    { label: "Editions", href: "/#editions" },
+    { label: "Gallery", href: "/#gallery" },
     { label: "Partners", href: "/partners" },
-    { label: "Next Event", href: "#next-event" },
+    { label: "Next Event", href: "/#next-event" },
   ],
-  primaryCta: { label: "Next Event", href: "#next-event" },
+  primaryCta: { label: "Next Event", href: "/#next-event" },
   secondaryCta: { label: "Partner With Us", href: "/partners" },
   culturalPartner: {
     name: "Retrospect90s00s",
