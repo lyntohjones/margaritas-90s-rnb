@@ -4,12 +4,23 @@ import { CTAButton } from "@/components/shared/CTAButton";
 import { InquiryForm } from "@/components/shared/InquiryForm";
 import { nextEvent } from "@/content/events";
 import { buildGoogleCalendarUrl } from "@/lib/calendar";
+import { buildEventJsonLd, formatEventDate } from "@/lib/event";
 
 export function NextEventSection() {
   const calendarUrl = buildGoogleCalendarUrl(nextEvent);
+  const eventJsonLd = buildEventJsonLd(nextEvent);
 
   return (
     <SectionShell id="next-event" eyebrow="Next Edition" title="The next pour">
+      {eventJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(eventJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
+
       {!nextEvent.confirmed ? (
         <div className="next-event next-event--pending">
           <MonoTag>NEXT DATE COMING SOON</MonoTag>
@@ -32,15 +43,7 @@ export function NextEventSection() {
             </div>
             <div className="event-meta__row">
               <span className="event-meta__label">DATE</span>
-              <span className="event-meta__value">
-                {nextEvent.dateISO &&
-                  new Date(nextEvent.dateISO).toLocaleDateString(undefined, {
-                    weekday: "long",
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-              </span>
+              <span className="event-meta__value">{formatEventDate(nextEvent.dateISO)}</span>
             </div>
             <div className="event-meta__row">
               <span className="event-meta__label">VENUE</span>
