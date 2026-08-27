@@ -58,7 +58,7 @@ export function InquiryForm({ kind }: { kind: Kind }) {
   }
 
   return (
-    <form className="inquiry-form" onSubmit={handleSubmit} noValidate>
+    <form className="inquiry-form" onSubmit={handleSubmit}>
       {kind === "partner" && (
         <div className="form-field">
           <label htmlFor={`${kind}-name`}>Name</label>
@@ -86,7 +86,11 @@ export function InquiryForm({ kind }: { kind: Kind }) {
       )}
 
       <div className="form-field" style={{ flex: "0 0 auto", justifyContent: "flex-end" }}>
-        <button type="submit" className="cta-button cta-button--primary">
+        <button
+          type="submit"
+          className="cta-button cta-button--primary"
+          style={{ color: "#111111" }}
+        >
           {copy.submitLabel}
         </button>
       </div>
