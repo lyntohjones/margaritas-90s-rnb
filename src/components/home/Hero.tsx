@@ -1,11 +1,17 @@
+import Image from "next/image";
 import { BrandMark } from "@/components/brand/BrandMark";
 import { DecorativeCollage } from "@/components/brand/DecorativeCollage";
 import { MonoTag } from "@/components/brand/MonoTag";
 import { CTAButton } from "@/components/shared/CTAButton";
 import { siteConfig } from "@/content/site";
 import { nextEvent } from "@/content/events";
+import { brandAssets } from "@/content/assets";
+import { assetExists } from "@/lib/assetExists";
 
 export function Hero() {
+  const heroAsset = brandAssets.heroDrink;
+  const hasHeroImage = assetExists(heroAsset.src);
+
   return (
     <div className="hero">
       <div className="wrap hero__grid">
@@ -37,7 +43,25 @@ export function Hero() {
           </p>
         </div>
 
-        <DecorativeCollage />
+        <div className="hero__collage">
+          {hasHeroImage ? (
+            <>
+              <Image
+                src={heroAsset.src}
+                alt={heroAsset.alt}
+                fill
+                priority
+                sizes="(max-width: 860px) 90vw, 40vw"
+                style={{ objectFit: "cover", objectPosition: heroAsset.objectPosition }}
+              />
+              <span className="hero__collage-tag">
+                <MonoTag>ORIGINAL EDITION</MonoTag>
+              </span>
+            </>
+          ) : (
+            <DecorativeCollage />
+          )}
+        </div>
       </div>
     </div>
   );

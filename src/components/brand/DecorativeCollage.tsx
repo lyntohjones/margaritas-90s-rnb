@@ -6,10 +6,15 @@ import { MonoTag } from "@/components/brand/MonoTag";
  * for a licensed brand asset later (see public/brand/README.md and
  * docs/ASSET_REQUIREMENTS.md). Purely decorative, hidden from assistive
  * technology.
+ *
+ * Rendered inside the `.hero__collage` wrapper only when
+ * `brandAssets.heroDrink` has no file on disk yet — see `Hero.tsx`, which
+ * owns that wrapper and swaps this out for a real `next/image` once the
+ * asset exists.
  */
 export function DecorativeCollage() {
   return (
-    <div className="hero__collage" aria-hidden="true">
+    <div aria-hidden="true">
       <svg
         className="hero__collage-glyph"
         width="1em"

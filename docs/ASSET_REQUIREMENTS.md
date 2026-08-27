@@ -119,15 +119,15 @@ direction, negative constraints, and a full copy-ready AI image prompt.
 - **Format:** WEBP
 - **Max file size:** 150 KB
 - **Transparency:** No
-- **Alt text:** "A grayscale cut-paper illustration of two margarita glasses side by side representing the Date Night Edition."
+- **Alt text:** "A grayscale cut-paper illustration of a margarita glass and a rose representing the Date Night Edition."
 - **Component using it:** `src/components/home/EditionsSection.tsx` — the "Date Night Edition" card.
-- **Desktop crop:** Full 4:5 frame, two glasses centered, evenly spaced.
+- **Desktop crop:** Full 4:5 frame, glass centered, rose placed lower-left.
 - **Mobile crop:** Same 4:5 frame, same composition.
 - **Object-position guidance:** `object-position: center 40%`.
-- **Art direction:** Two grayscale margarita glasses, close together (not clinking, not held by hands), cut-paper collage, subtle halftone, one thin connector line joining the pair. No red accent required.
+- **Art direction:** One grayscale margarita glass paired with one grayscale rose as the single romantic accent, cut-paper collage, subtle halftone, one thin connector line. Restrained Margarita Red accent as a single small paint-stroke or ribbon detail only.
 - **Negative constraints:** No couple/faces/hands, no candlelight cliché, no hearts, no readable text.
 - **AI image prompt:**
-  > Premium editorial cut-paper collage illustration for "Date Night Edition": two grayscale margarita glasses set close together, centered, on a warm vintage paper background (hex D7C5A4), subtle halftone texture, one thin hand-drawn connector line joining the pair. Fully grayscale subject. Large negative space, restrained and upscale, quietly romantic without clichés. Portrait 4:5 frame. No people, no hands, no faces, no hearts, no candlelight glow, no text.
+  > Premium editorial cut-paper collage illustration for "Date Night Edition": one grayscale margarita glass paired with one grayscale rose, centered, on a warm vintage paper background (hex D7C5A4), subtle halftone texture, one thin hand-drawn connector line, one small Margarita Red (hex EF3F23) accent stroke. Fully grayscale subject except that one red accent. Large negative space, restrained and upscale, quietly romantic without clichés. Portrait 4:5 frame. No people, no hands, no faces, no hearts, no candlelight glow, no text.
 
 ---
 
@@ -156,20 +156,20 @@ direction, negative constraints, and a full copy-ready AI image prompt.
 
 - **Filename:** `drink-classic.webp`
 - **Path:** `public/brand/drink-classic.webp`
-- **Width × Height:** 800 × 800 px (master at 2000 × 2000 px)
-- **Aspect ratio:** 1:1 (square)
+- **Width × Height:** 800 × 1000 px (master at 2000 × 2500 px)
+- **Aspect ratio:** 4:5 (portrait — matches the edition card images above; supersedes an earlier 1:1 draft of this spec)
 - **Format:** WEBP
-- **Max file size:** 120 KB
+- **Max file size:** 130 KB
 - **Transparency:** No
 - **Alt text:** "A grayscale cut-paper illustration of the Classic Margarita."
-- **Component using it:** `src/components/home/DrinksSection.tsx` — the "01 Classic Margarita" card (`.drink-card`).
-- **Desktop crop:** Full 1:1 frame, glass centered with even margin.
-- **Mobile crop:** Same 1:1 frame (drink cards stack full-width but stay square).
+- **Component using it:** `src/components/home/DrinksSection.tsx` — the "01 Classic Margarita" card (`.drink-card__image`).
+- **Desktop crop:** Full 4:5 frame, glass centered with even margin.
+- **Mobile crop:** Same 4:5 frame (drink cards stack full-width but stay portrait, matching the edition cards).
 - **Object-position guidance:** `object-position: center`.
-- **Art direction:** One grayscale classic margarita glass (salt rim visible as texture, not color), cut-paper collage, subtle halftone, tight composition since it renders small (~200–260px).
+- **Art direction:** One grayscale classic margarita glass (salt rim visible as texture, not color), cut-paper collage, subtle halftone, tight composition since it renders small (~200–260px wide).
 - **Negative constraints:** No garnish overload, no bar background, no ice/condensation photorealism, no text.
 - **AI image prompt:**
-  > Premium editorial cut-paper collage illustration of a single Classic Margarita glass with a visible salt rim (rendered as paper texture, not color), fully grayscale, centered on a warm vintage paper background (hex D7C5A4), subtle halftone texture. Simple, clean composition suited to a small card. Large even negative space around the glass. No color, no garnish clutter, no bar background, no condensation photorealism, no text. Square 1:1 frame.
+  > Premium editorial cut-paper collage illustration of a single Classic Margarita glass with a visible salt rim (rendered as paper texture, not color), fully grayscale, centered on a warm vintage paper background (hex D7C5A4), subtle halftone texture. Simple, clean composition suited to a small card. Large even negative space around the glass. No color, no garnish clutter, no bar background, no condensation photorealism, no text. Portrait 4:5 frame.
 
 ---
 
@@ -177,20 +177,20 @@ direction, negative constraints, and a full copy-ready AI image prompt.
 
 - **Filename:** `drink-strawberry.webp`
 - **Path:** `public/brand/drink-strawberry.webp`
-- **Width × Height:** 800 × 800 px (master at 2000 × 2000 px)
-- **Aspect ratio:** 1:1 (square)
+- **Width × Height:** 800 × 1000 px (master at 2000 × 2500 px)
+- **Aspect ratio:** 4:5 (portrait — matches the edition card images above; supersedes an earlier 1:1 draft of this spec)
 - **Format:** WEBP
-- **Max file size:** 120 KB
+- **Max file size:** 130 KB
 - **Transparency:** No
-- **Alt text:** "A grayscale cut-paper illustration of the Strawberry Margarita with a single red accent."
-- **Component using it:** `src/components/home/DrinksSection.tsx` — the "02 Strawberry Margarita" card.
-- **Desktop crop:** Full 1:1 frame, centered.
-- **Mobile crop:** Same 1:1 frame.
+- **Alt text:** "A grayscale cut-paper illustration of the Strawberry Margarita with a strawberry garnish."
+- **Component using it:** `src/components/home/DrinksSection.tsx` — the "02 Strawberry Margarita" card (`.drink-card__image`).
+- **Desktop crop:** Full 4:5 frame, centered.
+- **Mobile crop:** Same 4:5 frame.
 - **Object-position guidance:** `object-position: center`.
-- **Art direction:** One grayscale margarita glass with exactly one Margarita Red accent shape representing the strawberry note (a single silhouette slice or a single small dot of red — pick one), cut-paper collage, subtle halftone.
+- **Art direction:** One grayscale margarita glass with a strawberry garnish; exactly one Margarita Red accent shape may be used (a single silhouette slice or a single small dot of red — pick one), cut-paper collage, subtle halftone.
 - **Negative constraints:** No full-color strawberry photorealism, no pink wash across the whole image, no text.
 - **AI image prompt:**
-  > Premium editorial cut-paper collage illustration of a single Strawberry Margarita glass, fully grayscale except for exactly one small Margarita Red (hex EF3F23) accent shape representing the strawberry note. Centered on a warm vintage paper background (hex D7C5A4), subtle halftone texture. Large even negative space, simple composition suited to a small card. No pink or red wash across the whole image, no photorealistic fruit, no text. Square 1:1 frame.
+  > Premium editorial cut-paper collage illustration of a single Strawberry Margarita glass with a grayscale strawberry garnish, fully grayscale except for at most one small Margarita Red (hex EF3F23) accent shape. Centered on a warm vintage paper background (hex D7C5A4), subtle halftone texture. Large even negative space, simple composition suited to a small card. No pink or red wash across the whole image, no photorealistic color rendering, no text. Portrait 4:5 frame.
 
 ---
 
@@ -198,20 +198,20 @@ direction, negative constraints, and a full copy-ready AI image prompt.
 
 - **Filename:** `drink-spicy-mango.webp`
 - **Path:** `public/brand/drink-spicy-mango.webp`
-- **Width × Height:** 800 × 800 px (master at 2000 × 2000 px)
-- **Aspect ratio:** 1:1 (square)
+- **Width × Height:** 800 × 1000 px (master at 2000 × 2500 px)
+- **Aspect ratio:** 4:5 (portrait — matches the edition card images above; supersedes an earlier 1:1 draft of this spec)
 - **Format:** WEBP
-- **Max file size:** 120 KB
+- **Max file size:** 130 KB
 - **Transparency:** No
-- **Alt text:** "A grayscale cut-paper illustration of the Spicy Mango margarita with a single red accent for the heat."
-- **Component using it:** `src/components/home/DrinksSection.tsx` — the "03 Spicy Mango" card.
-- **Desktop crop:** Full 1:1 frame, centered.
-- **Mobile crop:** Same 1:1 frame.
+- **Alt text:** "A grayscale cut-paper illustration of the Spicy Mango margarita with a mango and chili accent."
+- **Component using it:** `src/components/home/DrinksSection.tsx` — the "03 Spicy Mango" card (`.drink-card__image`).
+- **Desktop crop:** Full 4:5 frame, centered.
+- **Mobile crop:** Same 4:5 frame.
 - **Object-position guidance:** `object-position: center`.
-- **Art direction:** One grayscale margarita glass with exactly one Margarita Red accent (a single thin chili-silhouette line or single red rim fleck) suggesting the heat. Cut-paper collage, subtle halftone.
-- **Negative constraints:** No full-color mango/chili photorealism, no orange wash, no text.
+- **Art direction:** One grayscale margarita glass with a mango and chili garnish; a Margarita Red accent (e.g. the chili) suggesting the heat. Cut-paper collage, subtle halftone.
+- **Negative constraints:** No full-color mango/chili photorealism beyond the single red accent, no orange wash, no text.
 - **AI image prompt:**
-  > Premium editorial cut-paper collage illustration of a single Spicy Mango margarita glass, fully grayscale except for exactly one small Margarita Red (hex EF3F23) accent — a thin chili-silhouette line or a single red rim fleck — suggesting the heat. Centered on a warm vintage paper background (hex D7C5A4), subtle halftone texture. Large even negative space, simple composition suited to a small card. No orange wash, no photorealistic fruit or chili, no text. Square 1:1 frame.
+  > Premium editorial cut-paper collage illustration of a single Spicy Mango margarita glass with grayscale mango-cube and chili garnish, mostly grayscale with a red chili accent (hex EF3F23) suggesting the heat. Centered on a warm vintage paper background (hex D7C5A4), subtle halftone texture. Large even negative space, simple composition suited to a small card. No orange wash across the whole image, no full-color photorealism, no text. Portrait 4:5 frame.
 
 ---
 
@@ -219,20 +219,20 @@ direction, negative constraints, and a full copy-ready AI image prompt.
 
 - **Filename:** `drink-seasonal.webp`
 - **Path:** `public/brand/drink-seasonal.webp`
-- **Width × Height:** 800 × 800 px (master at 2000 × 2000 px)
-- **Aspect ratio:** 1:1 (square)
+- **Width × Height:** 800 × 1000 px (master at 2000 × 2500 px)
+- **Aspect ratio:** 4:5 (portrait — matches the edition card images above; supersedes an earlier 1:1 draft of this spec)
 - **Format:** WEBP
-- **Max file size:** 120 KB
+- **Max file size:** 130 KB
 - **Transparency:** No
-- **Alt text:** "A grayscale cut-paper illustration of the rotating Seasonal Pour."
-- **Component using it:** `src/components/home/DrinksSection.tsx` — the "04 Seasonal Pour" card.
-- **Desktop crop:** Full 1:1 frame, centered.
-- **Mobile crop:** Same 1:1 frame.
+- **Alt text:** "A grayscale cut-paper illustration of the rotating Seasonal Pour with a botanical garnish."
+- **Component using it:** `src/components/home/DrinksSection.tsx` — the "04 Seasonal Pour" card (`.drink-card__image`).
+- **Desktop crop:** Full 4:5 frame, centered.
+- **Mobile crop:** Same 4:5 frame.
 - **Object-position guidance:** `object-position: center`.
-- **Art direction:** One grayscale margarita glass with one small, swappable seasonal accent (leaf or citrus, matching whichever is not used on the Seasonal Edition card to avoid repetition). Cut-paper collage, subtle halftone. No red accent required.
+- **Art direction:** One grayscale margarita/coupe glass with one small, swappable botanical garnish (leaf or citrus, matching whichever is not used on the Seasonal Edition card to avoid repetition). Cut-paper collage, subtle halftone. No red accent required.
 - **Negative constraints:** No literal holiday icons, no multiple garnishes, no text.
 - **AI image prompt:**
-  > Premium editorial cut-paper collage illustration of a single margarita glass representing a rotating "Seasonal Pour," fully grayscale, with one small seasonal accent silhouette (a leaf or a citrus slice). Centered on a warm vintage paper background (hex D7C5A4), subtle halftone texture. Large even negative space, simple composition suited to a small card. No holiday icons, no color, no text. Square 1:1 frame.
+  > Premium editorial cut-paper collage illustration of a single margarita/coupe glass representing a rotating "Seasonal Pour," fully grayscale, with one small botanical garnish (a leaf or a citrus slice). Centered on a warm vintage paper background (hex D7C5A4), subtle halftone texture. Large even negative space, simple composition suited to a small card. No holiday icons, no color, no text. Portrait 4:5 frame.
 
 ---
 
@@ -246,7 +246,7 @@ direction, negative constraints, and a full copy-ready AI image prompt.
 - **Max file size:** 300 KB
 - **Transparency:** No
 - **Alt text:** "Margaritas & 90s R&B — Cocktails. Slow Jams. Good Vibes." (used as the `og:image`/`twitter:image` alt text, not rendered visibly on the page)
-- **Component using it:** `src/lib/metadata.ts` — add `openGraph.images` and `twitter.images` pointing at `/brand/social-share.webp` once this file exists (currently omitted per the design spec's rule to never reference a missing asset).
+- **Component using it:** `src/lib/metadata.ts` — already wired via `assetExists()`: `openGraph.images` and `twitter.images` point at `/brand/social-share.webp` automatically once this file is present at that path; until then it stays omitted rather than referencing a missing asset.
 - **Desktop crop / Mobile crop:** Single fixed crop — Open Graph/Twitter preview images are not responsive, so only one 1200×630 delivery is needed.
 - **Object-position guidance:** Not applicable (fixed-crop preview image, not a responsive `<img>`).
 - **Art direction:** Wordmark treatment ("Margaritas & 90s R&B" in the script/mono brand system) plus one grayscale margarita glass motif, on a Warm Cream background with a restrained Margarita Red accent. Must read clearly as a small thumbnail in a chat app or social feed — keep it simple, no dense collage.
