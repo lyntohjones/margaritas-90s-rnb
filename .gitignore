@@ -33,3 +33,6 @@ task_plan.md
 
 # QA review artifacts (screenshots, results) — local review output, not app code
 .review/
+
+.vercel
+.env*
