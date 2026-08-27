@@ -464,7 +464,9 @@ button {
 
 .drinks-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* auto-fit (not a fixed 4 columns) so the 5th drink — Zero-Proof Pour —
+     joins the row instead of wrapping alone into an empty-looking row. */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -751,7 +753,16 @@ button {
 
   .hero__collage {
     order: -1;
+    width: 100%;
     max-width: 420px;
+    /* Center it once the stacked column is wider than the cap (tablet
+       range) instead of leaving it stranded flush-left with a large
+       empty gap beside it; inert at phone widths where the column is
+       already narrower than the cap. `width: 100%` keeps a definite
+       basis for the cap/centering — both children are absolutely
+       positioned, so without it `margin: auto` shrinks the box to
+       nothing (no intrinsic content to size against). */
+    margin: 0 auto;
   }
 
   .vibe-pillars {
