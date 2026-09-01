@@ -1,18 +1,22 @@
 import Image from "next/image";
 import { SectionShell } from "@/components/layout/SectionShell";
+import { M90GalleryHeading } from "@/components/interactive/M90GalleryHeading";
 import { Reveal } from "@/components/shared/Reveal";
 import { editions } from "@/content/editions";
 import { brandAssets, editionAssetKeys } from "@/content/assets";
+import { interactionFlags } from "@/content/interactions";
 import { assetExists } from "@/lib/assetExists";
 
 export function EditionsSection() {
   return (
     <SectionShell
       id="editions"
-      eyebrow="Choose Your Night"
-      title="Four ways to show up"
+      eyebrow="Four Editions"
+      title="CHOOSE YOUR NIGHT"
       lede="Every edition keeps the same core: slow jams, signature drinks, good company."
     >
+      {interactionFlags.galleryHeading && <M90GalleryHeading />}
+
       <div className="editions-grid">
         {editions.map((edition) => {
           const assetKey = editionAssetKeys[edition.slug];
