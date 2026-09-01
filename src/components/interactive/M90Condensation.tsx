@@ -21,7 +21,7 @@ function seedDrops(count: number): Drop[] {
   }));
 }
 
-const DROPS = seedDrops(54);
+const DROPS = seedDrops(42);
 
 export function M90Condensation() {
   const hostRef = useRef<HTMLDivElement>(null);
@@ -60,25 +60,24 @@ export function M90Condensation() {
         const y = yRatio * height;
         const radius = drop.radius * (0.92 + Math.sin(elapsed * 0.45 + drop.phase) * 0.08);
 
-        const gradient = context.createRadialGradient(
-          x - radius * 0.35,
-          y - radius * 0.45,
-          Math.max(0.2, radius * 0.08),
-          x,
-          y,
-          radius * 1.25,
-        );
-        gradient.addColorStop(0, "rgba(255,255,255,0.52)");
-        gradient.addColorStop(0.36, "rgba(242,229,206,0.12)");
-        gradient.addColorStop(1, "rgba(95,90,82,0.16)");
-
-        context.fillStyle = gradient;
+        context.fillStyle = "rgba(242,229,206,0.16)";
+        context.strokeStyle = "rgba(95,90,82,0.2)";
+        context.lineWidth = 0.65;
         context.beginPath();
         context.ellipse(x, y, radius * 0.78, radius, 0, 0, Math.PI * 2);
         context.fill();
-        context.strokeStyle = "rgba(95,90,82,0.18)";
-        context.lineWidth = 0.65;
         context.stroke();
+
+        context.fillStyle = "rgba(255,255,255,0.42)";
+        context.beginPath();
+        context.arc(
+          x - radius * 0.24,
+          y - radius * 0.32,
+          Math.max(0.45, radius * 0.16),
+          0,
+          Math.PI * 2,
+        );
+        context.fill();
       }
 
       context.restore();
