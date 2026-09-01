@@ -1,0 +1,58 @@
+.cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-width: 112px;
+  text-align: center;
+}
+
+.label,
+.duplicate {
+  display: block;
+  transition:
+    transform 240ms cubic-bezier(0.2, 0.75, 0.25, 1),
+    filter 240ms ease,
+    opacity 240ms ease;
+}
+
+.duplicate {
+  position: absolute;
+  inset: 11px 20px auto;
+  transform: translateY(135%);
+  filter: blur(4px);
+  opacity: 0;
+}
+
+.cta:hover .label,
+.cta:focus-visible .label {
+  transform: translateY(-135%);
+  filter: blur(4px);
+  opacity: 0;
+}
+
+.cta:hover .duplicate,
+.cta:focus-visible .duplicate {
+  transform: translateY(0);
+  filter: blur(0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .label,
+  .duplicate {
+    transition: none;
+    transform: none;
+    filter: none;
+  }
+
+  .duplicate {
+    display: none;
+  }
+
+  .cta:hover .label,
+  .cta:focus-visible .label {
+    transform: none;
+    filter: none;
+    opacity: 1;
+  }
+}
